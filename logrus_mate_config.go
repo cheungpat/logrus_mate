@@ -7,7 +7,6 @@ import (
 	"os"
 
 	"github.com/Sirupsen/logrus"
-	"github.com/gogap/env_json"
 )
 
 type Environments struct {
@@ -57,9 +56,7 @@ func LoadLogrusMateConfig(filename string) (conf LogrusMateConfig, err error) {
 		return
 	}
 
-	envJSON := env_json.NewEnvJson(env_json.ENV_JSON_KEY, env_json.ENV_JSON_EXT)
-
-	if err = envJSON.Unmarshal(data, &conf); err != nil {
+	if err = json.Unmarshal(data, &conf); err != nil {
 		return
 	}
 

@@ -134,8 +134,6 @@ type Environments struct {
 
 `run_env`: this filed is the key of run env, it will get actual value from environment by this key.
 
-> The json config file will be compile with package of `gogap/env_json` while you use func `logrus_mate.LoadLogrusMateConfig`, please forward to the project of [env_json](https://github.com/gogap/env_json) to known more details.
-
 #### Hooks
 | Hook  | Options |
 | ----- | ----------- |
